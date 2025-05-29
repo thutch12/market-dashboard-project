@@ -12,13 +12,13 @@ class FourExchangeActiveStocksFetcher:
         self.base_url = "https://www.alphavantage.co/query"
         
         # Define our target exchanges
-        self.target_exchanges = ['NASDAQ', 'NYSE', 'ASX', 'HKSE']
+        self.target_exchanges = 'NASDAQ'
         
     def get_all_stocks_from_target_exchanges(self):
         """
-        Get ALL stocks from NASDAQ, NYSE, ASX, and HKSE exchanges
+        Get ALL stocks from NASDAQ exchange
         """
-        print("Fetching comprehensive stock listing from all exchanges...")
+        print("Fetching comprehensive stock listing the NASDAQ...")
         params = {
             'function': 'LISTING_STATUS',
             'apikey': self.api_key
@@ -324,7 +324,7 @@ def main():
     print("=" * 50)
     
     # API Key setup
-    API_KEY = "FYPV46WYMH8METGG"  # Replace with your actual API key
+    API_KEY = "YOUR_API_KEY_HERE"  # Replace with your actual API key
     
     if API_KEY == "YOUR_API_KEY_HERE":
         print("Please replace 'YOUR_API_KEY_HERE' with your actual Alpha Vantage API key")
